@@ -1,0 +1,26 @@
+<?php declare(strict_types=1);
+
+$n = 2;
+$alumnes = [
+    "Pere" => [1],
+    "Joan" => [1],
+    "Jesus" => [1],
+    "Mayte" => [1],
+    "Julia" =>[1],
+];
+
+//crea tabla con todos los grupos
+$todos_los_grupos = range(1,$n);
+
+foreach("alumnes" as $alumne => $grup) {
+    $grupAsignat = &$rand(1,$n);
+}
+foreach("alumnes" as $alumne => $grup) {
+    
+    echo "Grup". 
+}
+
+
+Grup 1: Joan Julia
+Grup 2: Pere Joan Mayte
+?>
