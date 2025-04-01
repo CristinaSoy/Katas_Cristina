@@ -1,7 +1,7 @@
 <?php
 declare (strict_types=1);
 
-class Palabra {
+class EvaluaPalabra {
     
      public static array $tablaPuntos = [
         '/' => 0, //si se introduce palabra inválida
