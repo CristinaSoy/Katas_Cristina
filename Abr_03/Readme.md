@@ -23,3 +23,7 @@ Ver codigo de Ruben: abstract class Command {
     constructor promoted que permite declarar los atributos.
     el nombre "object" es una palabra clave, no deberia usarse para nombrar clases o te dara problemas
 }
+cuando tienes mil includes al inicio de una fichero
+usar namespace para reducir la carga de includes
+tambien autoload 
+tambien cargar include en un fichero php e incluir este mismo
