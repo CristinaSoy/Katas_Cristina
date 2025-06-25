@@ -1,4 +1,5 @@
 # kata-hurdle-race
+enlace = "https://github.com/CloudSalander/kata-hurdle-race";
 
 **Kata 54 per l'especialitat fullstackPHP 13-2-25**
 

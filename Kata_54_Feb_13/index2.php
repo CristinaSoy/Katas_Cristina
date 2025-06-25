@@ -1,31 +1,36 @@
 <?php
-$enlace = "https://github.com/CloudSalander/kata-hurdle-race";
 
 $acciones = ["run", "jump", "run", "jump", "jump", "run"];
-$pista = "_|_|__";
+$strPista = "|_|_|_";
+$pista = str_split($strPista);
 
-   public function evaluarCarrera(array $acciones, string $pista): bool {
-        $resultado = str_split($pista);   
-        $carreraOk = true;      
-    
+
+    function evaluarCarrera(array $acciones, array $pista): array {
+      //  $arrayPista = str_split($pista);   
+          
         foreach ($acciones as $i => $accion) {
-            if (($accion === "run" && $pista[$i] === "|") || ($accion === "jump" && $pista[$i] === "_")) { // realiza acción incorrecta
-                $carreraOk = false;
-                $resultado[$i] = ($accion === "run") ? "/" : "x"; //determina si la ha espifiado saltando o corriendo
+            if ( ($accion === "run" && $pista[$i] === "|") 
+               || ($accion === "jump" && $pista[$i] === "_") ) 
+            {               
+                $pista[$i] = ($accion === "run") ? "/" : "x"; //determina si la ha espifiado saltando o corriendo
             }
         }
     
-        echo implode("", $resultado) . PHP_EOL;
-    
-        return $carreraOk;
+        echo implode("", $pista) . PHP_EOL;
+        return $pista;
     }
-       
+    
+    function imprimeResultado(array $resultado): string {
+
+        return (!in_array("/", $resultado) && !in_array("x", $resultado))? "Carrera superada" : "Carrera fallida";
+    }
+
+//controlo que longitud de carrera y pista sean iguales
+if (count($pista)!= count($acciones)) {
+    echo "datos incorrectos";
+} else {
+
     $resultado = evaluarCarrera($acciones, $pista);
-    echo $resultado ? "Carrera superada" : "Carrera fallida";
-
-
-
-
+    echo imprimeResultado($resultado);
+}
 ?>
-
-return !in_array("/", $resultado) && !in_array("x", $resultado);
